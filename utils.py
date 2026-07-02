@@ -18,6 +18,6 @@ def centrar_ventana(ventana, ANCHO_VENTANA, ALTO_VENTANA):
 
 
 # Fuentes
-FUENTE_TITULO_PRINCIPAL = font.Font(family="Helvetica", size=20, weight="bold")
-FUENTE_SECUNDARIA = font.Font(family="Helvetica", size=16, weight="bold")
-FUENTE_LABEL = font.Font(family="Helvetica", size=12, weight="bold")
+FUENTE_TITULO_PRINCIPAL = ("Helvetica", 20, "bold")
+FUENTE_SECUNDARIA = ("Helvetica", 16, "bold")
+FUENTE_LABEL = ("Helvetica", 12, "bold")
