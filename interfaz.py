@@ -1,8 +1,10 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
+import logger
 
-# se importan las clases de los formularios
+from modelos.entidad import Entidad
+from excepciones import datosInvalidosError
 from utils import (
     ANCHO_VENTANA,
     ALTO_VENTANA,
@@ -72,7 +74,7 @@ class FormularioCliente(tk.Frame):
             text="Registrar Nuevo Cliente",
             font=FUENTE_SECUNDARIA
         ).grid(row=0, column=0, columnspan=2, sticky="e", pady=5)
-        # se crean los labels y campos de entrada para el ID y nombre del cliente
+        # se crean los labels y campos de entrada para el ID, nombre y email del cliente
         tk.Label(
             self,
             text="ID / Identificación:",
@@ -87,44 +89,89 @@ class FormularioCliente(tk.Frame):
         ).grid(row=2, column=0, sticky="e", pady=5)
         self.entrada_nombre = tk.Entry(self, width=25)
         self.entrada_nombre.grid(row=2, column=1, padx=5, pady=5, sticky="w")
-
+        tk.Label(
+            self,
+            text="E-mail:",
+            font=FUENTE_LABEL
+        ).grid(row=3, column=0, sticky="e", pady=5)
+        self.entrada_email = tk.Entry(self, width=25)
+        self.entrada_email.grid(row=3, column=1, padx=5, pady=5, sticky="w")
+        # se crea un botón para registrar el cliente, que llama al método procesar_registro_cliente al hacer clic
         boton_guardar = tk.Button(self, text="Registrar", command=self.procesar_registro_cliente, bg="#4CAF50", fg="white")
-        boton_guardar.grid(row=3, column=1, pady=10, sticky="w")
+        boton_guardar.grid(row=4, column=1, pady=10, sticky="w")
 
+    # se define el método para procesar el registro del cliente, validando los campos y mostrando mensajes de éxito o error
     def procesar_registro_cliente(self):
-
+        # Capturar y limpiar los datos de los campos de texto
         id_cliente = self.entrada_id.get().strip()
         nombre_cliente = self.entrada_nombre.get().strip()
+        email_cliente = self.entrada_email.get().strip() if hasattr(self, 'entrada_email') else "correo@ejemplo.com"
 
         try:
+            #Validación visual previa antes de instanciar el modelo
             if not id_cliente or not nombre_cliente:
-                raise Exception("datosInvalidosError: Campos obligatorios vacíos.")
+                from excepciones import datosInvalidosError
+                raise datosInvalidosError("Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.")
             
-            messagebox.showinfo("Éxito", f"Cliente {nombre_cliente} procesado.")
-            self.master.master.actualizar_logs_visuales(f"ÉXITO: Cliente [{id_cliente}] mapeado en el sistema.")
+            #Intentar crear la instancia del modelo (aquí se disparan los setters de clienteClass)
+            from modelos.cliente import clienteClass
+            nuevo_cliente = clienteClass(id_cliente, nombre_cliente, email_cliente)
+            
+            #FLUJO EXITOSO: Si no se lanza ninguna excepción
+            mensaje_exito = f"Cliente [{id_cliente}] - {nombre_cliente} registrado con éxito."
+            
+            # Muestra ventana emergente
+            messagebox.showinfo("Éxito", f"El cliente {nombre_cliente} ha sido procesado correctamente.")
+            
+            # Registra el éxito en la consola visual de la interfaz (abajo)
+            self.master.master.actualizar_logs_visuales(f"ÉXITO: {mensaje_exito}")
+            
+            # Limpia los campos del formulario para un nuevo ingreso
             self.limpiar_campos()
-        
-        except Exception as error_detectado:
-            messagebox.showerror("Error", str(error_detectado))
-            self.master.master.actualizar_logs_visuales(f"EXCEPCIÓN ATRAPADA: {str(error_detectado)}")
 
+        except datosInvalidosError as error_validacion:
+            # CAPTURA CONTROLADA: Errores de validación (campos vacíos, correo mal estructurado, etc.)
+            # Muestra un mensaje de error al usuario
+            messagebox.showerror("Datos Inválidos", str(error_validacion))
+            
+            # Mantiene el reporte visible en la consola inferior de la pantalla principal
+            self.master.master.actualizar_logs_visuales(f"VALIDACIÓN ENCONTRADA: {str(error_validacion)}")
+            
+            # Guarda de forma persistente el error en tu archivo errores.log técnico
+            logger.registrar_error("Fallo de validación en formulario cliente", error_validacion)
+
+        except Exception as error_inesperado:
+            # CAPTURA GENÉRICA: Cualquier otra falla imprevista del sistema (p. ej. error de atributos o tipos)
+            mensaje_critico = f"Error inesperado: {type(error_inesperado).__name__} - {str(error_inesperado)}"
+            messagebox.showerror("Error del Sistema", "Ocurrió una anomalía interna en el sistema. Contacte al administrador.")
+            
+            # Refleja la falla grave en la consola visual
+            self.master.master.actualizar_logs_visuales(f"ERROR CRÍTICO: {mensaje_critico}")
+            
+            # Guarda el rastro técnico completo en el log físico para el tutor
+            logger.registrar_error("Excepción no controlada en el registro de cliente", error_inesperado)
+
+    # se define el método para limpiar los campos de entrada del formulario después de un registro exitoso
     def limpiar_campos(self):
         self.entrada_id.delete(0, tk.END)
         self.entrada_nombre.delete(0, tk.END)
+        self.entrada_email.delete(0, tk.END)
 
+# se crea la clase para el formulario de servicios
 class FormularioServicio(tk.Frame):
 
     def __init__(self, parent):
         super().__init__(parent)
         tk.Label(self, text="Tipos de Servicio (Salas, Equipos, Asesorías)", font=FUENTE_SECUNDARIA).pack(pady=10)
 
+# se crea la clase para el formulario de reservas
 class FormularioReserva(tk.Frame):
     
     def __init__(self, parent):
         super().__init__(parent)
         tk.Label(self, text="Control y Procesamiento de Reservas", font=FUENTE_SECUNDARIA).pack(pady=10)
 
-
+# se define el bloque principal para ejecutar la aplicación
 if __name__ == "__main__":
     app = VistaPrincipal()
     app.mainloop()
