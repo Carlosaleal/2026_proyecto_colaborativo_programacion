@@ -9,3 +9,4 @@ class datosInvalidosError(errorSoftwareFJ):
     """
     Se lanza cuando los datos de
     """
+    pass
