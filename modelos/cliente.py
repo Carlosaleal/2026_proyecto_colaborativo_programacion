@@ -1,7 +1,7 @@
 from modelos.entidad import Entidad
 from excepciones import datosInvalidosError
 
-class clienteClass(Entidad):
+class Cliente(Entidad):
     def __init__(self, id_entidad: str, nombre: str, email: str):
         """
         Clase para guardar los campos de los clientes
