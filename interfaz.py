@@ -1,5 +1,4 @@
 import tkinter as tk
-import utils
 from tkinter import messagebox
 from tkinter import ttk
 
@@ -47,7 +46,7 @@ class VistaPrincipal(tk.Tk):
         self.texto_logs = tk.Text(panel_logs, height=4, bg="#F4F4F4", state="disabled")
         self.texto_logs.pack(fill="x", padx=5, pady=5)
         
-        self.actualizar_logs_visuales("Sistema FJ iniciado correctamente con geometrias de utils.py")
+        self.actualizar_logs_visuales("Sistema FJ iniciado correctamente")
 
     def actualizar_logs_visuales(self, mensaje: str):
         
