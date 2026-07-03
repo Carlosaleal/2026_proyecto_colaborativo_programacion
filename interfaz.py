@@ -1,10 +1,18 @@
+import os
+import sys
+
+directorio_raiz = os.path.dirname(os.path.abspath(__file__))
+if directorio_raiz not in sys.path:
+    sys.path.append(directorio_raiz)
+
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
 import logger
+import modelos.cliente
 
-from modelos.entidad import Entidad
 from excepciones import datosInvalidosError
+
 from utils import (
     ANCHO_VENTANA,
     ALTO_VENTANA,
@@ -115,7 +123,7 @@ class FormularioCliente(tk.Frame):
             
             #Intentar crear la instancia del modelo (aquí se disparan los setters de clienteClass)
             from modelos.cliente import clienteClass
-            nuevo_cliente = clienteClass(id_cliente, nombre_cliente, email_cliente)
+            nuevo_cliente = modelos.cliente.clienteClass(id_cliente, nombre_cliente, email_cliente)
             
             #FLUJO EXITOSO: Si no se lanza ninguna excepción
             mensaje_exito = f"Cliente [{id_cliente}] - {nombre_cliente} registrado con éxito."
