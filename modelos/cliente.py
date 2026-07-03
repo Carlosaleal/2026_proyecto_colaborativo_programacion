@@ -31,7 +31,7 @@ class Cliente(Entidad):
             raise datosInvalidosError("El correo no puede estar vacío")
         email_str = str(email).strip()
         if "@" not in email_str or "." not in email_str:
-            raise datosInvalidosError("El correo debe contener '.' y '.gmail'")
+            raise datosInvalidosError("El correo debe contener '.' y '@'")
         self._email = email_str
     
     
