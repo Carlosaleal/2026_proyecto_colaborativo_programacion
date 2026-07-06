@@ -13,6 +13,11 @@ Alineación con requerimientos:
   ni de interfaz, solo orquesta el arranque de la aplicación
 - EJECUCIÓN: Utiliza el bloque estándar `if __name__ == "__main__"` para evitar que
   la aplicación se inicie automáticamente si este archivo llegara a ser importado
+
+  Participantes del grupo:
+  - Juan Albrin Meza Guzmán (Administrador y encargado de modelos)
+  - Carlos Andrés Leal Ramírez (Encargado de IU)
+  - Kenier Pérez Solona (Encargado de Test Automatizado)
 """
 
 # se importa la clase VistaPrincipal desde el módulo interfaz
