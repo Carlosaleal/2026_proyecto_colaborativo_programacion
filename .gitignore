@@ -4,3 +4,13 @@ __pycache__/excepciones.cpython-314.pyc
 __pycache__/logger.cpython-314.pyc
 modelos/__pycache__/entidad.cpython-314.pyc
 modelos/__pycache__/__init__.cpython-314.pyc
+errores.log
+__pycache__/interfaz.cpython-314.pyc
+__pycache__/test_proyecto.cpython-314.pyc
+modelos/__pycache__/reserva.cpython-314.pyc
+modelos/__pycache__/servicio.cpython-314.pyc
+ui/__pycache__/__init__.cpython-314.pyc
+ui/__pycache__/formulario_cliente.cpython-314.pyc
+ui/__pycache__/formulario_reserva.cpython-314.pyc
+ui/__pycache__/formulario_servicio.cpython-314.pyc
+ui/__pycache__/ventana_principal.cpython-314.pyc

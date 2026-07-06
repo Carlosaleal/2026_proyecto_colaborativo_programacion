@@ -1,1 +1,141 @@
 
+2026-07-05 14:15:43 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico datosInvalidosError
+2026-07-05 15:29:35 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-05 17:29:30 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-05 17:56:06 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-05 18:01:58 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-05 18:04:06 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-05 18:05:58 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-05 18:17:00 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-05 18:17:10 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-05 18:19:51 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - El correo debe contener '.' y '@'
+2026-07-05 18:19:59 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - El correo debe contener '.' y '@'
+2026-07-05 18:20:11 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - El correo debe contener '.' y '@'
+2026-07-05 18:20:36 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-05 18:20:41 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-05 18:20:47 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - El correo debe contener '.' y '@'
+2026-07-05 18:21:01 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - El correo debe contener '.' y '@'
+2026-07-05 23:45:38 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-05 23:45:38 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-05 23:45:38 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-05 23:45:38 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-05 23:54:42 - [ERROR] - Fallo al crear reserva | Detalle Técnico: ImportError - cannot import name 'Reserva' from 'modelos.servicio' (d:\OneDrive - Universidad Nacional Abierta y a Distancia\UNAD CLEAL\2026 01\Programacion\Fase 4\Github\2026_proyecto_colaborativo_programacion\modelos\servicio.py)
+2026-07-06 00:30:51 - [ERROR] - Error al crear reserva | Detalle Técnico: ValueError - invalid literal for int() with base 10: ''
+2026-07-06 00:30:58 - [ERROR] - Error al crear reserva | Detalle Técnico: ValueError - invalid literal for int() with base 10: ''
+2026-07-06 00:31:00 - [ERROR] - Error al crear reserva | Detalle Técnico: ValueError - invalid literal for int() with base 10: ''
+2026-07-06 00:35:44 - [ERROR] - Error creación reserva | Detalle Técnico: datosInvalidosError - La duración debe ser un número entero mayor a cero.
+2026-07-06 00:35:51 - [INFO] - Reserva RES-I001-I003 creada.
+2026-07-06 00:36:20 - [INFO] - Reserva RES-I001-I003 creada.
+2026-07-06 00:36:26 - [INFO] - Reserva RES-I002-I002 creada.
+2026-07-06 00:36:29 - [INFO] - Reserva RES-I001-I001 creada.
+2026-07-06 00:36:32 - [INFO] - Reserva RES-I001-I001 creada.
+2026-07-06 00:36:36 - [INFO] - Reserva RES-I001-I003 creada.
+2026-07-06 00:36:42 - [INFO] - Reserva RES-I001-I002 creada.
+2026-07-06 00:36:53 - [INFO] - Reserva RES-I003-I001 creada.
+2026-07-06 00:36:58 - [INFO] - Reserva RES-I002-I002 creada.
+2026-07-06 00:37:08 - [INFO] - Reserva RES-I003-I003 creada.
+2026-07-06 00:37:18 - [INFO] - ESTADO: RES-I003-I003 a Cancelada
+2026-07-06 00:37:24 - [INFO] - ESTADO: RES-I001-I001 a Cancelada
+2026-07-06 00:37:25 - [ERROR] - Error eliminación | Detalle Técnico: Exception - Seleccione una reserva.
+2026-07-06 00:37:28 - [INFO] - ESTADO: RES-I003-I001 a Cancelada
+2026-07-06 00:37:31 - [ERROR] - Error estado | Detalle Técnico: datosInvalidosError - La reserva ya ha sido cancelada con anterioridad.
+2026-07-06 00:37:34 - [ERROR] - Error estado | Detalle Técnico: datosInvalidosError - No se puede confirmar una reserva
+2026-07-06 00:37:37 - [INFO] - ESTADO: RES-I002-I002 a Confirmada
+2026-07-06 00:40:10 - [INFO] - Reserva RES-I002-I001 creada.
+2026-07-06 00:40:16 - [INFO] - ESTADO: RES-I002-I001 a Confirmada
+2026-07-06 00:55:47 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 00:55:47 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 00:55:47 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 00:55:47 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 00:56:10 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-06 00:56:15 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - Campos obligatorios vacíos. Por favor diligencie la Identificación y el Nombre.
+2026-07-06 01:05:43 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 01:05:43 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:05:43 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:05:43 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 01:06:07 - [INFO] - Inicio de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 01:06:07 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 01:06:07 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:06:07 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:06:07 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 01:06:08 - [INFO] - Fin de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 01:07:25 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 01:07:25 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:07:25 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:07:25 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 01:08:13 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 01:08:13 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:08:13 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:08:13 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 01:08:31 - [INFO] - Inicio de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 01:08:31 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 01:08:31 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:08:31 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:08:31 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 01:08:32 - [INFO] - Fin de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 01:09:05 - [INFO] - Inicio de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 01:09:05 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 01:09:05 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:09:05 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:09:05 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 01:09:06 - [INFO] - Fin de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 01:14:24 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 01:14:24 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:14:24 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:14:24 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 01:14:43 - [INFO] - Inicio de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 01:14:43 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 01:14:43 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:14:43 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:14:43 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 01:14:44 - [INFO] - Fin de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 01:23:56 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 01:23:57 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:23:57 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:23:57 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 01:26:56 - [INFO] - Inicio de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 01:26:56 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 01:26:56 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:26:56 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 01:26:56 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 01:26:57 - [INFO] - Fin de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 09:39:18 - [ERROR] - Error inyectando datos de demostración en servicios | Detalle Técnico: AttributeError - 'FormularioServicio' object has no attribute 'servicios_dict'
+2026-07-06 09:39:18 - [ERROR] - Error inyectando datos de demostración en servicios | Detalle Técnico: AttributeError - 'FormularioServicio' object has no attribute 'servicios_dict'
+2026-07-06 09:39:18 - [ERROR] - Error inyectando datos de demostración en servicios | Detalle Técnico: AttributeError - 'FormularioServicio' object has no attribute 'servicios_dict'
+2026-07-06 09:40:16 - [ERROR] - Error inyectando datos de demostración en servicios | Detalle Técnico: AttributeError - 'FormularioServicio' object has no attribute 'servicios_dict'
+2026-07-06 09:40:16 - [ERROR] - Error inyectando datos de demostración en servicios | Detalle Técnico: AttributeError - 'FormularioServicio' object has no attribute 'servicios_dict'
+2026-07-06 09:40:16 - [ERROR] - Error inyectando datos de demostración en servicios | Detalle Técnico: AttributeError - 'FormularioServicio' object has no attribute 'servicios_dict'
+2026-07-06 10:10:13 - [ERROR] - Error inyectando datos de demostración en servicios | Detalle Técnico: AttributeError - 'FormularioServicio' object has no attribute 'servicios_dict'
+2026-07-06 10:10:13 - [ERROR] - Error inyectando datos de demostración en servicios | Detalle Técnico: AttributeError - 'FormularioServicio' object has no attribute 'servicios_dict'
+2026-07-06 10:10:13 - [ERROR] - Error inyectando datos de demostración en servicios | Detalle Técnico: AttributeError - 'FormularioServicio' object has no attribute 'servicios_dict'
+2026-07-06 10:22:54 - [ERROR] - Fallo de validación al registrar reserva | Detalle Técnico: Exception - Seleccione cliente y servicio.
+2026-07-06 10:22:59 - [ERROR] - Fallo de validación al registrar reserva | Detalle Técnico: Exception - Duración inválida.
+2026-07-06 10:23:20 - [INFO] - Reserva [RES-I003-I002] cambiada a estado 'Cancelada'
+2026-07-06 10:23:22 - [ERROR] - Fallo al cambiar estado de reserva | Detalle Técnico: Exception - Seleccione una reserva.
+2026-07-06 10:23:25 - [ERROR] - Fallo al cambiar estado de reserva | Detalle Técnico: datosInvalidosError - No se puede confirmar una reserva
+2026-07-06 10:23:28 - [INFO] - Reserva [RES-I003-I002] eliminada
+2026-07-06 10:25:29 - [ERROR] - Fallo de validación al registrar reserva | Detalle Técnico: Exception - Duración inválida.
+2026-07-06 10:25:33 - [INFO] - Reserva [RES-I001-I002] creada correctamente
+2026-07-06 10:26:07 - [INFO] - Inicio de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 10:26:07 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 10:26:07 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 10:26:07 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 10:26:07 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 10:26:08 - [INFO] - Fin de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 10:26:14 - [INFO] - Inicio de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 10:26:14 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 10:26:14 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 10:26:14 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 10:26:14 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 10:26:15 - [INFO] - Fin de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 10:29:44 - [INFO] - Inicio de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 10:29:44 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 10:29:44 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 10:29:44 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 10:29:44 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 10:29:45 - [INFO] - Fin de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 10:30:25 - [INFO] - Reserva [RES-I004-I006] creada correctamente
+2026-07-06 10:32:09 - [INFO] - Reserva [RES-I005-I006] creada correctamente
+2026-07-06 10:32:51 - [INFO] - Reserva [RES-I001-I003] creada correctamente - Cliente: Juan Albrin Meza, Servicio: Sala de Desarrollo Avanzado, Duración: 1h, Costo: $ 45000
+2026-07-06 10:33:01 - [INFO] - Reserva [RES-I002-I002] creada correctamente - Cliente: Kenier Perez, Servicio: Video Beam 4K Pro, Duración: 10h, Costo: $ 150000
+2026-07-06 10:33:05 - [INFO] - Reserva [RES-I002-I002] eliminada

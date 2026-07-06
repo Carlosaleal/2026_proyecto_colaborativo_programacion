@@ -12,42 +12,56 @@ class Servicio(Entidad):
         self.nombre_servicio = nombre_servicio
         self.costo_base = costo_base
 
-        @property
-        def nombre_servicio(self) -> str:
-            """Método por el cual se define el atributo nombre_servicio como no accesible desde afuera"""
-            return self._nombre_servicio
+    @staticmethod
+    def formatear_valor_numero(valor: float) -> str:
+        """Devuelve un número como texto sin mostrar .0 cuando es entero."""
+        try:
+            numero = float(valor)
+        except (TypeError, ValueError):
+            return str(valor)
 
-        @nombre_servicio.setter
-        def nombre_servicio(self, valor:str):
-            """Metodo por el cual se validan los datos de entrada como el valor del costo_base"""
-            if valor is None or str(valor).strip()=="":
-                raise datosInvalidosError("El nombre del servicio no puede estar vacío.") # Manejo de los errores con el archivo para los log y novedades
-            self._nombre_servicio = str(valor).strip()
+        if numero.is_integer():
+            return str(int(numero))
+
+        texto = f"{numero:.2f}".rstrip("0").rstrip(".")
+        return texto if texto else "0"
+
+    @property
+    def nombre_servicio(self) -> str:
+        """Método por el cual se define el atributo nombre_servicio como no accesible desde afuera"""
+        return self._nombre_servicio
+
+    @nombre_servicio.setter
+    def nombre_servicio(self, valor:str):
+        """Metodo por el cual se validan los datos de entrada como el valor del costo_base"""
+        if valor is None or str(valor).strip()=="":
+            raise datosInvalidosError("El nombre del servicio no puede estar vacío.") # Manejo de los errores con el archivo para los log y novedades
+        self._nombre_servicio = str(valor).strip()
         
-        @property
-        def costo_base(self) -> float:
-            """Método por el cual se define el atributo costo_base como no accesible desde afuera"""
-            return self._costo_base
+    @property
+    def costo_base(self) -> float:
+        """Método por el cual se define el atributo costo_base como no accesible desde afuera"""
+        return self._costo_base
     
-        @costo_base.setter
-        def costo_base(self, valor: float):
-            """Metodo por el cual se validan los datos de entrada como el valor del costo_base"""
-            try:
-                valor_float = float(valor)
-            except (ValueError, TypeError):
-                raise datosInvalidosError("El costo base debe ser un valor númerico válido.")
-            
-            if valor_float < 0:
-                raise datosInvalidosError("El costo base no puede ser negativo.")
-            self._costo_base = valor_float
+    @costo_base.setter
+    def costo_base(self, valor: float):
+        """Metodo por el cual se validan los datos de entrada como el valor del costo_base"""
+        try:
+            valor_float = float(valor)
+        except (ValueError, TypeError):
+            raise datosInvalidosError("El costo base debe ser un valor númerico válido.")
+           
+        if valor_float < 0:
+            raise datosInvalidosError("El costo base no puede ser negativo.")
+        self._costo_base = valor_float
 
-        @abstractmethod
-        def calcular_costo(self, duracion:int, **kwargs) -> float:
-            """
-            Este metodo es para calcular el costo en función de la duración (horas o días) y 
-            entre otros parámetros opcionales (simulando sobrecarga)
-            """
-            pass
+    @abstractmethod
+    def calcular_costo(self, duracion:int, **kwargs) -> float:
+        """
+        Este metodo es para calcular el costo en función de la duración (horas o días) y 
+        entre otros parámetros opcionales (simulando sobrecarga)
+        """
+        pass
 
 class ReservaSala(Servicio):
     """
@@ -73,7 +87,7 @@ class ReservaSala(Servicio):
         
     def obtener_detalles(self)->str:
             """Método universal y polimorfico por el cual se obtienen los datos de la reserva"""
-            return f"[Sala] ID: {self.id_entidad} | {self.nombre_servicio} | Capacidad: {self.capacidad} pers. | Costo/Hora: ${self.costo_base}"
+            return f"[Sala] ID: {self.id_entidad} | {self.nombre_servicio} | Capacidad: {self.capacidad} pers. | Costo/Hora: ${self.formatear_valor_numero(self.costo_base)}"
     
 class AlquilerEquipo(Servicio):
     """Servicio especializado en alquiler de hardware o infraestructurasss"""
@@ -93,7 +107,7 @@ class AlquilerEquipo(Servicio):
         return round(costo_total, 2)
     
     def obtener_detalles(self):
-        return f"[Equipo] ID: {self.id_entidad} | {self.nombre_servicio} ({self.marca_modelo}) | Costo/Día: ${self.costo_base}"
+        return f"[Equipo] ID: {self.id_entidad} | {self.nombre_servicio} ({self.marca_modelo}) | Costo/Día: ${self.formatear_valor_numero(self.costo_base)}"
     
 class AsesoriaEspecializada(Servicio):
     """
@@ -113,4 +127,4 @@ class AsesoriaEspecializada(Servicio):
         return round(costo_total, 2)
     
     def obtener_detalles(self) -> str:
-        return f"[Asesoría] ID: {self.id_entidad} | {self.nombre_servicio} | Consultor: {self.consultor} | Costo/Hora: ${self.costo_base}"
+        return f"[Asesoría] ID: {self.id_entidad} | {self.nombre_servicio} | Consultor: {self.consultor} | Costo/Hora: ${self.formatear_valor_numero(self.costo_base)}"
