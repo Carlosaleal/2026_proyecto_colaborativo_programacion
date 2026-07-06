@@ -139,3 +139,12 @@
 2026-07-06 10:32:51 - [INFO] - Reserva [RES-I001-I003] creada correctamente - Cliente: Juan Albrin Meza, Servicio: Sala de Desarrollo Avanzado, Duración: 1h, Costo: $ 45000
 2026-07-06 10:33:01 - [INFO] - Reserva [RES-I002-I002] creada correctamente - Cliente: Kenier Perez, Servicio: Video Beam 4K Pro, Duración: 10h, Costo: $ 150000
 2026-07-06 10:33:05 - [INFO] - Reserva [RES-I002-I002] eliminada
+2026-07-06 13:10:02 - [INFO] - Inicio de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 13:10:02 - [WARNING] - Auditoría Kenier - Prueba 2 controlada: El correo debe contener '.' y '@'
+2026-07-06 13:10:02 - [INFO] - Servicio instanciado con estructura del grupo: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 13:10:02 - [INFO] - Estructura de inicialización de reserva comprobada: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'obtener_detalles'
+2026-07-06 13:10:02 - [WARNING] - Auditoría Kenier - Excepción capturada en ciclo: El nombre no puede estar vacío
+2026-07-06 13:10:03 - [INFO] - Fin de ejecución de pruebas automatizadas desde la interfaz
+2026-07-06 13:10:43 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - El correo debe contener '.' y '@'
+2026-07-06 13:10:47 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - El correo debe contener '.' y '@'
+2026-07-06 13:11:05 - [ERROR] - Fallo de validación en formulario cliente | Detalle Técnico: datosInvalidosError - El correo debe contener '.' y '@'
